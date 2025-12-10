@@ -96,7 +96,7 @@ A secure password generation tool with strength analysis and multiple customizat
 - Clone the repository:
 
 - bash
-- git clone https://github.com/yourusername/my-first-project.git
+- git clone https://elagiaunified.github.io/my-first-project/my-first-project.git
 - Navigate to password-generator folder:
 
 - bash

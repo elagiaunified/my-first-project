@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-lock"></i> Secure Password Generator</h1>
+            <p class="subtitle">Create strong, secure passwords instantly</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Panel: Password Display -->
+            <div class="password-display-section">
+                <div class="password-card">
+                    <h2><i class="fas fa-key"></i> Generated Password</h2>
+                    
+                    <div class="password-output">
+                        <div class="password-field" id="passwordOutput">
+                            Click Generate
+                        </div>
+                        <button onclick="copyPassword()" class="copy-btn" id="copyBtn">
+                            <i class="far fa-copy"></i> Copy
+                        </button>
+                    </div>
+
+                    <!-- Password Strength Meter -->
+                    <div class="strength-meter">
+                        <h3>Password Strength</h3>
+                        <div class="meter">
+                            <div class="strength-bar" id="strengthBar"></div>
+                        </div>
+                        <div class="strength-text" id="strengthText">Very Weak</div>
+                    </div>
+
+                    <!-- Password Info -->
+                    <div class="password-info">
+                        <div class="info-item">
+                            <i class="fas fa-ruler"></i>
+                            <span>Length: <strong id="lengthValue">12</strong> characters</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Entropy: <strong id="entropyValue">0</strong> bits</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-dice"></i>
+                            <span>Possible Combinations: <strong id="combinationsValue">0</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Generate Multiple -->
+                    <div class="multiple-passwords">
+                        <h3><i class="fas fa-layer-group"></i> Generate Multiple</h3>
+                        <div class="multiple-controls">
+                            <button onclick="generateMultiple(3)">3 Passwords</button>
+                            <button onclick="generateMultiple(5)">5 Passwords</button>
+                            <button onclick="generateMultiple(10)">10 Passwords</button>
+                        </div>
+                        <div class="password-list" id="passwordList"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Controls -->
+            <div class="controls-section">
+                <!-- Length Slider -->
+                <div class="control-group">
+                    <h3><i class="fas fa-sliders-h"></i> Password Length</h3>
+                    <div class="slider-container">
+                        <input type="range" id="lengthSlider" min="4" max="32" value="12" class="slider">
+                        <div class="slider-values">
+                            <span>4</span>
+                            <span id="currentLength">12</span>
+                            <span>32</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Character Options -->
+                <div class="control-group">
+                    <h3><i class="fas fa-check-square"></i> Include Characters</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox">
+                            <input type="checkbox" id="uppercase" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Uppercase Letters (A-Z)</span>
+                            <span class="char-count" id="upperCount">26</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="lowercase" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Lowercase Letters (a-z)</span>
+                            <span class="char-count" id="lowerCount">26</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="numbers" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Numbers (0-9)</span>
+                            <span class="char-count" id="numberCount">10</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="symbols" checked>
+                            <span class="checkmark"></span>
+                            <span class="label-text">Symbols (!@#$%^&*)</span>
+                            <span class="char-count" id="symbolCount">10</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Custom Characters -->
+                <div class="control-group">
+                    <h3><i class="fas fa-edit"></i> Custom Characters</h3>
+                    <input type="text" id="customChars" placeholder="Enter custom characters (optional)" 
+                           class="custom-input">
+                    <p class="helper-text">Add any extra characters you want to include</p>
+                </div>
+
+                <!-- Preset Templates -->
+                <div class="control-group">
+                    <h3><i class="fas fa-clone"></i> Preset Templates</h3>
+                    <div class="preset-buttons">
+                        <button onclick="applyPreset('memorable')" class="preset-btn">
+                            <i class="fas fa-brain"></i> Memorable
+                        </button>
+                        <button onclick="applyPreset('pin')" class="preset-btn">
+                            <i class="fas fa-unlock-alt"></i> PIN Code
+                        </button>
+                        <button onclick="applyPreset('strong')" class="preset-btn active">
+                            <i class="fas fa-shield-alt"></i> Strong
+                        </button>
+                        <button onclick="applyPreset('all')" class="preset-btn">
+                            <i class="fas fa-fire"></i> Maximum
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="action-buttons">
+                    <button onclick="generatePassword()" class="generate-btn">
+                        <i class="fas fa-bolt"></i> Generate Password
+                    </button>
+                    <button onclick="resetSettings()" class="reset-btn">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+
+                <!-- Tips -->
+                <div class="tips">
+                    <h3><i class="fas fa-lightbulb"></i> Security Tips</h3>
+                    <ul>
+                        <li>Use at least 12 characters for strong passwords</li>
+                        <li>Include different character types</li>
+                        <li>Don't use personal information</li>
+                        <li>Use a unique password for each account</li>
+                        <li>Consider using a password manager</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Password History -->
+        <div class="history-section">
+            <h3><i class="fas fa-history"></i> Recently Generated</h3>
+            <div class="history-list" id="historyList">
+                <!-- History items will appear here -->
+            </div>
+            <button onclick="clearHistory()" class="clear-history-btn">
+                <i class="fas fa-trash"></i> Clear History
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast">Password copied to clipboard!</div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

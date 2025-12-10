@@ -70,7 +70,7 @@ A secure password generation tool with strength analysis and multiple customizat
 - Character Pool Size: Number of possible characters
 - Time to Crack: Estimated based on entropy (not shown)
 
-##📱 Responsive Design
+## 📱 Responsive Design
 - Desktop: Two-panel layout with full controls
 - Tablet: Stacked panels with full functionality
 - Mobile: Vertical layout, touch-optimized
@@ -92,7 +92,7 @@ A secure password generation tool with strength analysis and multiple customizat
 - ✅ Preset templates apply settings
 - ✅ Mobile responsiveness
 
-##🚀 Running Locally
+## 🚀 Running Locally
 - Clone the repository:
 
 ```bash

@@ -33,10 +33,10 @@ A fully functional calculator web application with keyboard support and clean UI
 
 ## 🏗️ Project Structure
 
-- **calculator/
-- **├── index.html # Main HTML structure
-- **├── style.css # Styling and layout
-- **└── script.js # Calculator logic
+- calculator/
+- ├── index.html # Main HTML structure
+- ├── style.css # Styling and layout
+- └── script.js # Calculator logic
 
 ## 🔧 Technical Implementation
 

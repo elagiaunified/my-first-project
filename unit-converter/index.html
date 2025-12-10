@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Universal Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <h1><i class="fas fa-exchange-alt"></i> Universal Unit Converter</h1>
+                <p class="tagline">Convert between any units instantly - Length, Weight, Temperature, Volume & More!</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat">
+                    <i class="fas fa-ruler-combined"></i>
+                    <span>Length</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-weight"></i>
+                    <span>Weight</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-thermometer-half"></i>
+                    <span>Temperature</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-wine-bottle"></i>
+                    <span>Volume</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-bolt"></i>
+                    <span>Digital</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Panel: Conversion Interface -->
+            <div class="converter-panel">
+                <!-- Category Selection -->
+                <div class="category-selector">
+                    <button class="category-btn active" data-category="length">
+                        <i class="fas fa-ruler"></i> Length
+                    </button>
+                    <button class="category-btn" data-category="weight">
+                        <i class="fas fa-weight-hanging"></i> Weight
+                    </button>
+                    <button class="category-btn" data-category="temperature">
+                        <i class="fas fa-temperature-high"></i> Temperature
+                    </button>
+                    <button class="category-btn" data-category="volume">
+                        <i class="fas fa-wine-glass-alt"></i> Volume
+                    </button>
+                    <button class="category-btn" data-category="digital">
+                        <i class="fas fa-hdd"></i> Digital
+                    </button>
+                    <button class="category-btn" data-category="time">
+                        <i class="fas fa-clock"></i> Time
+                    </button>
+                </div>
+
+                <!-- Conversion Area -->
+                <div class="conversion-area">
+                    <!-- Input Section -->
+                    <div class="input-section">
+                        <div class="input-group">
+                            <label for="fromValue">
+                                <i class="fas fa-arrow-circle-down"></i> From
+                            </label>
+                            <div class="input-with-unit">
+                                <input 
+                                    type="number" 
+                                    id="fromValue" 
+                                    value="1" 
+                                    placeholder="Enter value..."
+                                    step="any"
+                                >
+                                <select id="fromUnit" class="unit-select">
+                                    <!-- Options will be filled by JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Swap Button -->
+                        <div class="swap-container">
+                            <button id="swapBtn" class="swap-btn">
+                                <i class="fas fa-exchange-alt"></i> Swap
+                            </button>
+                        </div>
+
+                        <!-- Output Section -->
+                        <div class="input-group">
+                            <label for="toValue">
+                                <i class="fas fa-arrow-circle-up"></i> To
+                            </label>
+                            <div class="input-with-unit">
+                                <input 
+                                    type="text" 
+                                    id="toValue" 
+                                    value="1" 
+                                    readonly
+                                    placeholder="Result will appear here..."
+                                >
+                                <select id="toUnit" class="unit-select">
+                                    <!-- Options will be filled by JavaScript -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <button onclick="convert()" class="convert-btn">
+                            <i class="fas fa-calculator"></i> Convert
+                        </button>
+                        <button onclick="clearAll()" class="clear-btn">
+                            <i class="fas fa-eraser"></i> Clear
+                        </button>
+                        <button onclick="copyResult()" class="copy-btn">
+                            <i class="far fa-copy"></i> Copy
+                        </button>
+                        <button onclick="addToFavorites()" class="favorite-btn">
+                            <i class="far fa-star"></i> Favorite
+                        </button>
+                    </div>
+
+                    <!-- Formula Display -->
+                    <div class="formula-display">
+                        <h3><i class="fas fa-code"></i> Conversion Formula</h3>
+                        <div id="formulaText">1 × 1 = 1</div>
+                    </div>
+
+                    <!-- Quick Conversions -->
+                    <div class="quick-conversions">
+                        <h3><i class="fas fa-bolt"></i> Quick Convert</h3>
+                        <div class="quick-buttons">
+                            <!-- Quick conversion buttons will be added by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Info & History -->
+            <div class="info-panel">
+                <!-- Unit Info -->
+                <div class="unit-info-card">
+                    <h3><i class="fas fa-info-circle"></i> Unit Information</h3>
+                    <div class="info-content" id="unitInfo">
+                        Select a unit to see information here...
+                    </div>
+                </div>
+
+                <!-- Conversion History -->
+                <div class="history-card">
+                    <div class="history-header">
+                        <h3><i class="fas fa-history"></i> Conversion History</h3>
+                        <button onclick="clearHistory()" class="clear-history-btn">
+                            <i class="fas fa-trash"></i> Clear
+                        </button>
+                    </div>
+                    <div class="history-list" id="historyList">
+                        <!-- History items will appear here -->
+                    </div>
+                </div>
+
+                <!-- Favorites -->
+                <div class="favorites-card">
+                    <div class="favorites-header">
+                        <h3><i class="fas fa-star"></i> Favorite Conversions</h3>
+                    </div>
+                    <div class="favorites-list" id="favoritesList">
+                        <!-- Favorite conversions will appear here -->
+                    </div>
+                </div>
+
+                <!-- Common Conversions -->
+                <div class="common-conversions">
+                    <h3><i class="fas fa-fire"></i> Popular Conversions</h3>
+                    <div class="common-list">
+                        <div class="common-item" data-conv="length|meter|kilometer">
+                            <span>Meters → Kilometers</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="common-item" data-conv="weight|kilogram|pound">
+                            <span>Kilograms → Pounds</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="common-item" data-conv="temperature|celsius|fahrenheit">
+                            <span>Celsius → Fahrenheit</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="common-item" data-conv="digital|megabyte|gigabyte">
+                            <span>MB → GB</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="common-item" data-conv="volume|liter|gallon">
+                            <span>Liters → Gallons</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <p>6 Conversion Categories</p>
+                    <p>150+ Different Units</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <p>Real-time Conversion</p>
+                    <p>History & Favorites</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Accuracy</h4>
+                    <p>Precision up to 10 decimals</p>
+                    <p>Scientific formulas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Project</h4>
+                    <p>GitHub Portfolio Project #5</p>
+                    <p>Built by YOU!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Universal Unit Converter | Part of Your GitHub Portfolio</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@ A fully functional calculator web application with keyboard support and clean UI
 ![Calculator Preview](https://img.shields.io/badge/Status-Complete-success) ![Technology](https://img.shields.io/badge/Tech-HTML/CSS/JS-blue)
 
 ## 🚀 Live Demo
-**[Try it here!](https://yourusername.github.io/my-first-project/calculator/)**
+**[Try it here!](https://elagiaunified.github.io/my-first-project/calculator/)**
 
 ## ✨ Features
 

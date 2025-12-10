@@ -60,6 +60,30 @@ An interactive game where players guess a secret number with multiple difficulty
 - **localStorage**: Save high scores between sessions
 - **Animation Control**: Confetti effects on win
 
+## 🔄 Future Improvements
+- Potential enhancements:
+-  Add sound effects
+-  Implement multiplayer mode
+-  Add achievements/badges
+-  Include number range customization
+-  Add timed challenges
+-  Implement leaderboards
+-  Add tutorial for new players
+
+## 📚 What I Learned
+- Game Development: Core game loop and state management
+- Randomization: Generating and working with random numbers
+- User Feedback: Providing clear, helpful game feedback
+- Scoring Systems: Designing fair and engaging scoring
+- Animation: Creating visual effects with CSS and JavaScript
+- Difficulty Balancing: Adjusting game parameters for different skill levels
+
+## 🤝 Contributing
+- Have ideas to improve the game? Open an issue or submit a pull request!
+
+## 📄 License
+- This project is open source and available under the MIT License.
+
 ## 🎲 Game Logic
 
 ```javascript
@@ -78,40 +102,3 @@ function getHint(guess, secret) {
     if (difference > 5) return "Hot 🔥🔥";
     return "Very Hot 🔥🔥🔥";
 }
-
-
-## 🔄 Future Improvements
-Potential enhancements:
-
-Add sound effects
-
-Implement multiplayer mode
-
-Add achievements/badges
-
-Include number range customization
-
-Add timed challenges
-
-Implement leaderboards
-
-Add tutorial for new players
-
-📚 What I Learned
-Game Development: Core game loop and state management
-
-Randomization: Generating and working with random numbers
-
-User Feedback: Providing clear, helpful game feedback
-
-Scoring Systems: Designing fair and engaging scoring
-
-Animation: Creating visual effects with CSS and JavaScript
-
-Difficulty Balancing: Adjusting game parameters for different skill levels
-
-🤝 Contributing
-Have ideas to improve the game? Open an issue or submit a pull request!
-
-📄 License
-This project is open source and available under the MIT License.

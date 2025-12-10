@@ -95,12 +95,13 @@ A secure password generation tool with strength analysis and multiple customizat
 ##🚀 Running Locally
 - Clone the repository:
 
-- bash
+```bash
 - git clone https://elagiaunified.github.io/my-first-project/my-first-project.git
 - Navigate to password-generator folder:
-
-- bash
+```
+```bash
 - cd my-first-project/password-generator
+```
 - Open index.html in your browser
 
 ## 📝 Code Highlights

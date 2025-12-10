@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-tasks"></i> My To-Do List</h1>
+        
+        <!-- Input Section -->
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter a new task...">
+            <button onclick="addTask()"><i class="fas fa-plus"></i> Add Task</button>
+        </div>
+        
+        <!-- Stats -->
+        <div class="stats">
+            <span>Total: <span id="totalTasks">0</span></span>
+            <span>Completed: <span id="completedTasks">0</span></span>
+            <span>Pending: <span id="pendingTasks">0</span></span>
+        </div>
+        
+        <!-- Task List -->
+        <ul id="taskList">
+            <!-- Tasks will appear here -->
+        </ul>
+        
+        <!-- Buttons -->
+        <div class="controls">
+            <button onclick="clearCompleted()"><i class="fas fa-check-circle"></i> Clear Completed</button>
+            <button onclick="clearAll()" class="clear-all"><i class="fas fa-trash"></i> Clear All</button>
+        </div>
+        
+        <!-- Instructions -->
+        <div class="instructions">
+            <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Press Enter to add tasks. Click tasks to mark complete.</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

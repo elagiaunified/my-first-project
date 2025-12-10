@@ -34,12 +34,12 @@ A comprehensive unit conversion tool supporting 6 categories and 150+ units with
 
 ## 📊 Supported Categories & Units
 
-### **Length** (Meter, Kilometer, Centimeter, Millimeter, Mile, Yard, Foot, Inch, Nautical Mile)
-### **Weight** (Kilogram, Gram, Milligram, Pound, Ounce, Stone, Metric Ton)
-### **Temperature** (Celsius, Fahrenheit, Kelvin)
-### **Volume** (Liter, Milliliter, Gallon, Quart, Pint, Cup, Fluid Ounce, Cubic Meter)
-### **Digital** (Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, Bit)
-### **Time** (Second, Minute, Hour, Day, Week, Month, Year)
+## **Length** (Meter, Kilometer, Centimeter, Millimeter, Mile, Yard, Foot, Inch, Nautical Mile)
+## **Weight** (Kilogram, Gram, Milligram, Pound, Ounce, Stone, Metric Ton)
+## **Temperature** (Celsius, Fahrenheit, Kelvin)
+## **Volume** (Liter, Milliliter, Gallon, Quart, Pint, Cup, Fluid Ounce, Cubic Meter)
+## **Digital** (Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, Bit)
+## **Time** (Second, Minute, Hour, Day, Week, Month, Year)
 
 ## 🏗️ Project Structure
 - unit-converter/
@@ -130,17 +130,17 @@ A comprehensive unit conversion tool supporting 6 categories and 150+ units with
 - Open index.html in your browser
 
 ## 📝 Code Highlights
-Temperature Conversion
-javascript
-function convertTemperature(value, fromUnit, toUnit) {
-    let inCelsius;
-    switch(fromUnit) {
-        case '°C': inCelsius = value; break;
-        case '°F': inCelsius = (value - 32) * 5/9; break;
-        case 'K': inCelsius = value - 273.15; break;
-    }
-    // Convert from Celsius to target unit...
-}
+- Temperature Conversion
+- javascript
+- function convertTemperature(value, fromUnit, toUnit) {
+-    let inCelsius;
+-    switch(fromUnit) {
+-        case '°C': inCelsius = value; break;
+-        case '°F': inCelsius = (value - 32) * 5/9; break;
+-        case 'K': inCelsius = value - 273.15; break;
+-    }
+-    // Convert from Celsius to target unit...
+-}
 
 ## 📐 Conversion Formulas
 

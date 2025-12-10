@@ -105,15 +105,16 @@ A secure password generation tool with strength analysis and multiple customizat
 
 ## 📝 Code Highlights
 - Secure Random Generation
-//javascript
-- if (window.crypto && window.crypto.getRandomValues) {
--     const randomValues = new Uint32Array(length);
--     window.crypto.getRandomValues(randomValues);
-    
--     for (let i = 0; i < length; i++) {
--         password += charPool[randomValues[i] % poolLength];
--     }
-- }
+```javascript
+if (window.crypto && window.crypto.getRandomValues) {
+     const randomValues = new Uint32Array(length);
+     window.crypto.getRandomValues(randomValues);
+   
+     for (let i = 0; i < length; i++) {
+         password += charPool[randomValues[i] % poolLength];
+     }
+ }
+```
 
 ## 🔄 Future Improvements
 - Potential enhancements:

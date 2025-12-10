@@ -29,10 +29,10 @@ A feature-rich task management application with localStorage persistence and cle
 Your tasks are automatically saved and will reappear when you revisit the page!
 
 ## 🏗️ Project Structure
-todo-list/
-├── index.html # Main HTML structure
-├── style.css # Styling and animations
-└── script.js # Task management logic
+- todo-list/
+- ├── index.html # Main HTML structure
+- ├── style.css # Styling and animations
+- └── script.js # Task management logic
 
 
 ## 🔧 Technical Implementation

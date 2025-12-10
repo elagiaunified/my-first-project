@@ -102,3 +102,4 @@ function getHint(guess, secret) {
     if (difference > 5) return "Hot 🔥🔥";
     return "Very Hot 🔥🔥🔥";
 }
+```

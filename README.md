@@ -6,11 +6,11 @@ Welcome to my beginner web development portfolio! This repository contains **5 c
 
 | # | Project | Description | Live Demo |
 |---|---------|-------------|-----------|
-| 1 | [**Calculator**](/calculator/) | A fully functional calculator with keyboard support | [Live Demo](https://yourusername.github.io/my-first-project/calculator/) |
-| 2 | [**To-Do List**](/todo-list/) | Task manager with localStorage persistence | [Live Demo](https://yourusername.github.io/my-first-project/todo-list/) |
-| 3 | [**Number Guessing Game**](/number-guess/) | Interactive game with scoring system | [Live Demo](https://yourusername.github.io/my-first-project/number-guess/) |
-| 4 | [**Password Generator**](/password-generator/) | Secure password creator with strength meter | [Live Demo](https://yourusername.github.io/my-first-project/password-generator/) |
-| 5 | [**Unit Converter**](/unit-converter/) | Multi-category unit conversion tool | [Live Demo](https://yourusername.github.io/my-first-project/unit-converter/) |
+| 1 | [**Calculator**](/calculator/) | A fully functional calculator with keyboard support | [Live Demo](https://elagiaunified.github.io/my-first-project/calculator/) |
+| 2 | [**To-Do List**](/todo-list/) | Task manager with localStorage persistence | [Live Demo](https://elagiaunified.github.io/my-first-project/todo-list/) |
+| 3 | [**Number Guessing Game**](/number-guess/) | Interactive game with scoring system | [Live Demo](https://elagiaunified.github.io/my-first-project//number-guess/) |
+| 4 | [**Password Generator**](/password-generator/) | Secure password creator with strength meter | [Live Demo](https://elagiaunified.github.io/my-first-project//password-generator/) |
+| 5 | [**Unit Converter**](/unit-converter/) | Multi-category unit conversion tool | [Live Demo](https://elagiaunified.github.io/my-first-project//unit-converter/) |
 
 ## 🎯 What I Learned
 
@@ -50,4 +50,4 @@ Each project is hosted for free on GitHub Pages! Click the "Live Demo" links abo
 ### **Locally**
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/my-first-project.git
+   git clone https://elagiaunified.github.io/my-first-project.git

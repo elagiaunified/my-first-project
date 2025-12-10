@@ -34,12 +34,12 @@ A comprehensive unit conversion tool supporting 6 categories and 150+ units with
 
 ## 📊 Supported Categories & Units
 
-## **Length** (Meter, Kilometer, Centimeter, Millimeter, Mile, Yard, Foot, Inch, Nautical Mile)
-## **Weight** (Kilogram, Gram, Milligram, Pound, Ounce, Stone, Metric Ton)
-## **Temperature** (Celsius, Fahrenheit, Kelvin)
-## **Volume** (Liter, Milliliter, Gallon, Quart, Pint, Cup, Fluid Ounce, Cubic Meter)
-## **Digital** (Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, Bit)
-## **Time** (Second, Minute, Hour, Day, Week, Month, Year)
+- **Length** (Meter, Kilometer, Centimeter, Millimeter, Mile, Yard, Foot, Inch, Nautical Mile)
+- **Weight** (Kilogram, Gram, Milligram, Pound, Ounce, Stone, Metric Ton)
+- **Temperature** (Celsius, Fahrenheit, Kelvin)
+- **Volume** (Liter, Milliliter, Gallon, Quart, Pint, Cup, Fluid Ounce, Cubic Meter)
+- **Digital** (Byte, Kilobyte, Megabyte, Gigabyte, Terabyte, Petabyte, Bit)
+- **Time** (Second, Minute, Hour, Day, Week, Month, Year)
 
 ## 🏗️ Project Structure
 - unit-converter/

@@ -83,6 +83,7 @@ An interactive game where players guess a secret number with multiple difficulty
 
 ## 📄 License
 - This project is open source and available under the MIT License.
+- Part of my beginner web development portfolio. Check out the other projects in the main repository!
 
 ## 🎲 Game Logic
 
@@ -101,5 +102,62 @@ function getHint(guess, secret) {
     if (difference > 10) return "Warm 🔥";
     if (difference > 5) return "Hot 🔥🔥";
     return "Very Hot 🔥🔥🔥";
+}
+```
+
+## 🏆 Scoring System
+- Attempts: Fewer attempts = better score
+- Difficulty Bonus: Harder levels give higher potential scores
+- High Score: Best score saved per difficulty level
+- Visual Rewards: Celebration effects for good performance
+
+## 📱 Responsive Design
+- Desktop: Full game interface with side stats
+- Tablet: Condensed layout, larger touch targets
+- Mobile: Vertical layout, simplified controls
+- All devices: Readable text, appropriate button sizes
+
+## 🎨 Gaming Experience
+- Visual Progression: Guess history shows pattern
+- Audio-like Feedback: Temperature hints (🔥/❄️)
+- Victory Celebration: Confetti animation
+- Progressive Difficulty: Unlock harder challenges
+- Clear Feedback: Immediate response to actions
+
+## 🧪 Testing
+Tested game scenarios:
+- ✅ All difficulty levels work correctly
+- ✅ Hint system provides accurate feedback
+- ✅ High score saves and loads properly
+- ✅ Game resets correctly for new game
+- ✅ Input validation prevents errors
+- ✅ Celebration triggers on win
+- ✅ Mobile responsiveness
+
+## 🚀 Running Locally
+1. Clone the repository:
+```
+bash
+git clone https://github.com/yourusername/my-first-project.git
+```
+2. Navigate to number-guess folder:
+```
+bash
+cd my-first-project/number-guess
+```
+3. Open index.html in your browser
+
+## 📝 Code Highlights
+Celebration Function
+```javascript
+function celebrate() {
+    const confettiContainer = document.getElementById('confetti-container');
+    const colors = ['#2ecc71', '#3498db', '#9b59b6', '#f1c40f', '#e74c3c'];
+    
+    for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        // ... animation setup
+        confettiContainer.appendChild(confetti);
+    }
 }
 ```

@@ -115,13 +115,13 @@ function saveTasks() {
 
 ## 🧪 Testing
 Tested scenarios:
-✅ Add multiple tasks
-✅ Mark tasks as complete
-✅ Delete individual tasks
-✅ Clear all completed tasks
-✅ Persistence across page refresh
-✅ Mobile responsiveness
-✅ Keyboard navigation
+- ✅ Add multiple tasks
+- ✅ Mark tasks as complete
+- ✅ Delete individual tasks
+- ✅ Clear all completed tasks
+- ✅ Persistence across page refresh
+- ✅ Mobile responsiveness
+- ✅ Keyboard navigation
 
 ## 🚀 Running Locally
 1. Clone the repository:

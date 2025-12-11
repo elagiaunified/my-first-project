@@ -80,10 +80,11 @@ Your tasks are automatically saved and will reappear when you revisit the page!
 
 ## 📄 License
 - This project is open source and available under the MIT License.
+- Part of my beginner web development portfolio. Check out the other projects in the main repository!
 
 ## 💾 Data Storage
 
-Tasks are stored using `localStorage`:
+- Tasks are stored using `localStorage`:
 ```javascript
 // Save tasks to localStorage
 function saveTasks() {
@@ -98,3 +99,58 @@ function saveTasks() {
     
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+```
+
+## 📱 Responsive Design
+- Desktop: Two-column layout with stats sidebar
+- Tablet: Stacked layout with full-width elements
+- Mobile: Touch-friendly buttons, optimized spacing
+- All screens: Readable fonts, appropriate sizing
+
+## 🎨 UI/UX Features
+- Visual Hierarchy: Clear distinction between sections
+- Feedback: Hover states, active states, transitions
+- Accessibility: Proper contrast ratios, keyboard navigation
+- Intuitive Controls: Familiar interface patterns
+
+## 🧪 Testing
+Tested scenarios:
+✅ Add multiple tasks
+✅ Mark tasks as complete
+✅ Delete individual tasks
+✅ Clear all completed tasks
+✅ Persistence across page refresh
+✅ Mobile responsiveness
+✅ Keyboard navigation
+
+## 🚀 Running Locally
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/my-first-project.git
+```
+2. Navigate to todo-list folder:
+
+```bash
+cd my-first-project/todo-list
+```
+3. Open index.html in your browser
+
+## 📝 Code Highlights
+- Add Task Function
+```javascript
+function addTask() {
+    const taskText = taskInput.value.trim();
+    
+    if (taskText === '') {
+        alert('Please enter a task!');
+        return;
+    }
+    
+    createTaskElement(taskText);
+    saveTasks();
+    taskInput.value = '';
+    taskInput.focus();
+    updateStats();
+}
+```

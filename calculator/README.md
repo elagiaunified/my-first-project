@@ -85,3 +85,59 @@ Tested with various scenarios:
 1. **Clone the repository**:
    ```bash
    git clone https://elagiaunified.github.io/my-first-project.git
+   ```
+2. Navigate to calculator folder:
+
+```bash
+cd my-first-project/calculator
+```
+3. Open index.html in your browser
+
+📝 Code Highlights
+Key Function
+javascript
+function calculate() {
+    try {
+        let expression = display.value.replace('×', '*');
+        let result = eval(expression);
+        
+        if (!isFinite(result)) {
+            display.value = 'Error';
+        } else {
+            display.value = result;
+        }
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
+🔄 Future Improvements
+Potential enhancements:
+
+Add memory functions (M+, M-, MR, MC)
+
+Include scientific calculator features
+
+Add calculation history
+
+Implement theme switcher (light/dark mode)
+
+Add sound effects for button presses
+
+📚 What I Learned
+DOM Manipulation: How to update HTML elements with JavaScript
+
+Event Handling: Click events, keyboard events, event listeners
+
+CSS Grid: Creating complex layouts with CSS Grid
+
+JavaScript Functions: Writing reusable, modular functions
+
+Error Handling: Preventing and catching errors in user input
+
+🤝 Contributing
+Found a bug or have a suggestion? Feel free to open an issue or submit a pull request!
+
+📄 License
+This project is open source and available under the MIT License.
+
+Part of my beginner web development portfolio. Check out the other projects in the main repository!

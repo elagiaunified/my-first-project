@@ -93,7 +93,7 @@ A comprehensive unit conversion tool supporting 6 categories and 150+ units with
 -  ✅ Responsive on all screen sizes
 -  ✅ Edge cases handled (large numbers, decimals)
 
-##🔄 Future Improvements
+## 🔄 Future Improvements
 - Potential enhancements:
 - Add currency conversion with live rates
 - Include area and pressure conversions
@@ -103,7 +103,7 @@ A comprehensive unit conversion tool supporting 6 categories and 150+ units with
 - Include unit conversion games/quiz
 - Add multilingual support
 
-##📚 What I Learned
+## 📚 What I Learned
 - Mathematical Formulas: Implementing precise conversion algorithms
 - Data Organization: Structuring complex unit data
 - Category Management: Switching between different data sets
@@ -119,29 +119,31 @@ A comprehensive unit conversion tool supporting 6 categories and 150+ units with
 - Part of my beginner web development portfolio. Check out the other projects in the main repository!
 
 ## 🚀 Running Locally
-- Clone the repository:
+1. Clone the repository:
 
-- bash 
-- git clone https://github.com/elagiaunified/my-first-project.git
-- Navigate to unit-converter folder:
+```bash 
+git clone https://github.com/elagiaunified/my-first-project.git
+```
+2. Navigate to unit-converter folder:
 
-- bash
-- cd my-first-project/unit-converter
-- Open index.html in your browser
+```bash
+cd my-first-project/unit-converter
+```
+3. Open index.html in your browser
 
 ## 📝 Code Highlights
-- Temperature Conversion
-- javascript
-- function convertTemperature(value, fromUnit, toUnit) {
--    let inCelsius;
--    switch(fromUnit) {
--        case '°C': inCelsius = value; break;
--        case '°F': inCelsius = (value - 32) * 5/9; break;
--        case 'K': inCelsius = value - 273.15; break;
--    }
--    // Convert from Celsius to target unit...
--}
-
+Temperature Conversion
+```javascript
+ function convertTemperature(value, fromUnit, toUnit) {
+    let inCelsius;
+    switch(fromUnit) {
+        case '°C': inCelsius = value; break;
+        case '°F': inCelsius = (value - 32) * 5/9; break;
+        case 'K': inCelsius = value - 273.15; break;
+    }
+    // Convert from Celsius to target unit...
+}
+```
 ## 📐 Conversion Formulas
 
 ### **Standard Units**
@@ -152,5 +154,6 @@ function convertStandard(value, fromUnit, toUnit) {
     const inBase = value / category.conversions[fromUnit];
     return inBase * category.conversions[toUnit];
 }
+```
 Temperature
 Special handling for Celsius ↔ Fahrenheit ↔ Kelvin with unique formulas.

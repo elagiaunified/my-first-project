@@ -93,9 +93,9 @@ cd my-first-project/calculator
 ```
 3. Open index.html in your browser
 
-📝 Code Highlights
+## 📝 Code Highlights
 Key Function
-javascript
+```javascript
 function calculate() {
     try {
         let expression = display.value.replace('×', '*');
@@ -110,6 +110,7 @@ function calculate() {
         display.value = 'Error';
     }
 }
+```
 🔄 Future Improvements
 Potential enhancements:
 

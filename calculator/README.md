@@ -111,34 +111,25 @@ function calculate() {
     }
 }
 ```
-🔄 Future Improvements
-Potential enhancements:
 
-Add memory functions (M+, M-, MR, MC)
+## 🔄 Future Improvements
+- Potential enhancements:
+- Add memory functions (M+, M-, MR, MC)
+- Include scientific calculator features
+- Add calculation history
+- Implement theme switcher (light/dark mode)
+- Add sound effects for button presses
 
-Include scientific calculator features
+## 📚 What I Learned
+- DOM Manipulation: How to update HTML elements with JavaScript
+- Event Handling: Click events, keyboard events, event listeners
+- CSS Grid: Creating complex layouts with CSS Grid
+- JavaScript Functions: Writing reusable, modular functions
+- Error Handling: Preventing and catching errors in user input
 
-Add calculation history
+## 🤝 Contributing
+- Found a bug or have a suggestion? Feel free to open an issue or submit a pull request!
 
-Implement theme switcher (light/dark mode)
-
-Add sound effects for button presses
-
-📚 What I Learned
-DOM Manipulation: How to update HTML elements with JavaScript
-
-Event Handling: Click events, keyboard events, event listeners
-
-CSS Grid: Creating complex layouts with CSS Grid
-
-JavaScript Functions: Writing reusable, modular functions
-
-Error Handling: Preventing and catching errors in user input
-
-🤝 Contributing
-Found a bug or have a suggestion? Feel free to open an issue or submit a pull request!
-
-📄 License
-This project is open source and available under the MIT License.
-
-Part of my beginner web development portfolio. Check out the other projects in the main repository!
+## 📄 License
+- This project is open source and available under the MIT License.
+- Part of my beginner web development portfolio. Check out the other projects in the main repository!

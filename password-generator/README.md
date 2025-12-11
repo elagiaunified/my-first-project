@@ -96,12 +96,12 @@ A secure password generation tool with strength analysis and multiple customizat
 - Clone the repository:
 
 ```bash
-- git clone https://elagiaunified.github.io/my-first-project/my-first-project.git
+  git clone https://elagiaunified.github.io/my-first-project/my-first-project.git
 ```
 - Navigate to password-generator folder:
 
 ```bash
-- cd my-first-project/password-generator
+  cd my-first-project/password-generator
 ```
 - Open index.html in your browser
 
@@ -145,6 +145,12 @@ if (window.crypto && window.crypto.getRandomValues) {
 
 ## 🔐 Security Features
 
+### **Entropy Calculation**
+```javascript
+function calculateEntropy(poolSize, length) {
+    return Math.log2(Math.pow(poolSize, length));
+}
+```
 - Strength Meter
 - Very Weak: < 30 (Red)
 - Weak: 30-50 (Orange)
@@ -152,8 +158,3 @@ if (window.crypto && window.crypto.getRandomValues) {
 - Strong: 70-90 (Light Green)
 - Very Strong: 90-100 (Green)
 
-### **Entropy Calculation**
-```javascript
-function calculateEntropy(poolSize, length) {
-    return Math.log2(Math.pow(poolSize, length));
-}

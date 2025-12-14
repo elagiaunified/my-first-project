@@ -52,7 +52,14 @@ Each project is hosted for free on GitHub Pages! Click the "Live Demo" links abo
    ```bash
    git clone https://elagiaunified.github.io/my-first-project.git
    ```
-   
+2. Navigate to any project folder:
+
+   ```bash
+   cd my-first-project/calculator
+   ```
+
+ 3. Open index.html in your browser
+
 ## 🏗️ Project Structure
 
 my-first-project/

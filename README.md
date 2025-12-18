@@ -61,15 +61,15 @@ Each project is hosted for free on GitHub Pages! Click the "Live Demo" links abo
  3. Open index.html in your browser
 
 ## 🏗️ Project Structure
-
-- my-first-project/
-- ├── calculator/           # Project 1: Calculator app
-- ├── todo-list/           # Project 2: Task manager
-- ├── number-guess/        # Project 3: Guessing game
-- ├── password-generator/  # Project 4: Security tool
-- ├── unit-converter/      # Project 5: Conversion tool
-- └── README.md            # This file
-
+```
+my-first-project/
+├── calculator/           # Project 1: Calculator app
+├── todo-list/           # Project 2: Task manager
+├── number-guess/        # Project 3: Guessing game
+├── password-generator/  # Project 4: Security tool
+├── unit-converter/      # Project 5: Conversion tool
+└── README.md            # This file
+```
 ## 🎨 Features Common to All Projects
 - ✅ Responsive Design - Works on mobile & desktop
 - ✅ Clean Code - Well-commented and organized

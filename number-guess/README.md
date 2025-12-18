@@ -32,11 +32,12 @@ An interactive game where players guess a secret number with multiple difficulty
 - **Hard**: Numbers 1-200, 5 attempts
 
 ## 🏗️ Project Structure
-- number-guess/
-- ├── index.html # Game interface
-- ├── style.css # Game styling and animations
-- └── script.js # Game logic and scoring
-
+```
+number-guess/
+├── index.html # Game interface
+├── style.css # Game styling and animations
+└── script.js # Game logic and scoring
+```
 ## 🔧 Technical Implementation
 
 ### **HTML**

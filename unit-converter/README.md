@@ -42,11 +42,12 @@ A comprehensive unit conversion tool supporting 6 categories and 150+ units with
 - **Time** (Second, Minute, Hour, Day, Week, Month, Year)
 
 ## 🏗️ Project Structure
-- unit-converter/
-- ├── index.html # Main converter interface
-- ├── style.css # Professional styling
-- └── script.js # Conversion logic and data
-
+```
+unit-converter/
+├── index.html # Main converter interface
+├── style.css # Professional styling
+└── script.js # Conversion logic and data
+```
 ## 🔧 Technical Implementation
 
 ### **HTML**

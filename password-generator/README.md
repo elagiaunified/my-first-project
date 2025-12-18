@@ -37,11 +37,12 @@ A secure password generation tool with strength analysis and multiple customizat
    - Check password strength with the meter
 
 ## 🏗️ Project Structure
-- password-generator/
-- ├── index.html # Main interface
-- ├── style.css # Security-focused styling
-- └── script.js # Generation logic and analysis
-
+```
+password-generator/
+├── index.html # Main interface
+├── style.css # Security-focused styling
+└── script.js # Generation logic and analysis
+```
 ## 🔧 Technical Implementation
 
 ### **HTML**
